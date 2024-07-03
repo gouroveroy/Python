@@ -30,6 +30,7 @@ from openai import OpenAI
 #     print(completion.choices[0].message.content)
 
 
+
 def speak(text):
     engine = pyttsx3.init()  # object creation
     """ RATE"""
@@ -91,9 +92,9 @@ def commandExecution(command):
         song = "_".join(words)
         link = songLibraries[song.lower()]
         webbrowser.open(link)
-
+    
     # elif "news" in command.lower():
-    #     api_key = "8e1280b09383495798436cca0d0cdc61"
+    #     api_key = ""
     #     response = requests.get(
     #         f"https://newsapi.org/v2/everything?q=tesla&from=2024-06-03&sortBy=publishedAt&apiKey={api_key}"
     #     )
@@ -106,7 +107,6 @@ def commandExecution(command):
     #         print(f"Failed to retrieve news: {response.status_code}")
 
     else:
-        # aiProcess(command)
         speak(f"Sorry, I didn't understand the command {command}.")
 
 
