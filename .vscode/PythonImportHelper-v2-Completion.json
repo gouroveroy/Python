@@ -1,0 +1,29 @@
+[
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "calculatot",
+        "description": "calculatot",
+        "peekOfCode": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nprint(\"Which operation to perform :\", end=\"\\n\")\nprint(\"1.Addition :\", end=\"\\n\")\nprint(\"2.Subtraction :\", end=\"\\n\")\nprint(\"3.Multiplication :\", end=\"\\n\")\nprint(\"4.Division :\", end=\"\\n\")\nprint(\"5.Modulo :\", end=\"\\n\")\nprint(\"6.Floor division :\", end=\"\\n\")\nprint(\"7.Exponential :\", end=\"\\n\")",
+        "detail": "calculatot",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "calculatot",
+        "description": "calculatot",
+        "peekOfCode": "b = int(input(\"Enter second number: \"))\nprint(\"Which operation to perform :\", end=\"\\n\")\nprint(\"1.Addition :\", end=\"\\n\")\nprint(\"2.Subtraction :\", end=\"\\n\")\nprint(\"3.Multiplication :\", end=\"\\n\")\nprint(\"4.Division :\", end=\"\\n\")\nprint(\"5.Modulo :\", end=\"\\n\")\nprint(\"6.Floor division :\", end=\"\\n\")\nprint(\"7.Exponential :\", end=\"\\n\")\nc = int(input(\"Enter the number of operation to perform\"))",
+        "detail": "calculatot",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "calculatot",
+        "description": "calculatot",
+        "peekOfCode": "c = int(input(\"Enter the number of operation to perform\"))\nprint(a + b)\nprint(a - b)\nprint(a * b)\nprint(a / b)\nprint(a % b)\nprint(a // b)\nprint(a ** b)",
+        "detail": "calculatot",
+        "documentation": {}
+    }
+]
