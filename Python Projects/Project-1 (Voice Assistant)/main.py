@@ -107,6 +107,7 @@ def commandExecution(command):
     #         print(f"Failed to retrieve news: {response.status_code}")
 
     else:
+        # aiProcess(commmand)
         speak(f"Sorry, I didn't understand the command {command}.")
 
 
