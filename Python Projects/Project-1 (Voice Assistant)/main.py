@@ -8,26 +8,26 @@ from songs import songLibraries
 from openai import OpenAI
 
 
-def aiProcess(command):
-    client = OpenAI(
-        api_key="sk-proj-FExG8S3o5WGGvjlUNUDxT3BlbkFJjsJqARKP3n3JEz20Iz6s",
-    )
+# def aiProcess(command):
+#     client = OpenAI(
+#         api_key="",
+#     )
 
-    completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {
-                "role": "system",
-                "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.",
-            },
-            {
-                "role": "user",
-                "content": "Compose a poem that explains the concept of recursion in programming.",
-            },
-        ],
-    )
+#     completion = client.chat.completions.create(
+#         model="gpt-3.5-turbo",
+#         messages=[
+#             {
+#                 "role": "system",
+#                 "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.",
+#             },
+#             {
+#                 "role": "user",
+#                 "content": "Compose a poem that explains the concept of recursion in programming.",
+#             },
+#         ],
+#     )
 
-    print(completion.choices[0].message.content)
+#     print(completion.choices[0].message.content)
 
 
 def speak(text):
@@ -92,18 +92,18 @@ def commandExecution(command):
         link = songLibraries[song.lower()]
         webbrowser.open(link)
 
-    elif "news" in command.lower():
-        api_key = "8e1280b09383495798436cca0d0cdc61"
-        response = requests.get(
-            f"https://newsapi.org/v2/everything?q=tesla&from=2024-06-03&sortBy=publishedAt&apiKey={api_key}"
-        )
-        if response.status_code == 200:
-            news_data = response.json()
-            for article in news_data['articles']:
-                speak(f"Title: {article['title']}")
-                speak(f"Description: {article['description']}")
-        else:
-            print(f"Failed to retrieve news: {response.status_code}")
+    # elif "news" in command.lower():
+    #     api_key = "8e1280b09383495798436cca0d0cdc61"
+    #     response = requests.get(
+    #         f"https://newsapi.org/v2/everything?q=tesla&from=2024-06-03&sortBy=publishedAt&apiKey={api_key}"
+    #     )
+    #     if response.status_code == 200:
+    #         news_data = response.json()
+    #         for article in news_data['articles']:
+    #             speak(f"Title: {article['title']}")
+    #             speak(f"Description: {article['description']}")
+    #     else:
+    #         print(f"Failed to retrieve news: {response.status_code}")
 
     else:
         # aiProcess(command)
